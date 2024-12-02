@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="register.css">
+</head>
+<body>
+    <header>
+        <h1>Register for Workshop</h1>
+        <p>Secure your spot today!</p>
+    </header>
+    <main>
+        <form action="register.php" method="post" id="registrationForm" onsubmit="return validateForm()">
+            <label for="name">Name <span class="required">*</span></label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            
+            <label for="usn">USN <span class="required">*</span></label>
+            <input type="text" id="usn" name="usn" placeholder="Enter your USN" required>
+
+            <label for="phone">Phone <span class="required">*</span></label>
+            <input type="text" id="phone" name="phone" placeholder="Enter your phone number" required>
+
+            <label for="campus">Campus <span class="required">*</span></label>
+            <select id="campus" name="campus" required>
+                <option value="">Select Campus</option>
+                <option value="south">South</option>
+                <option value="north">North</option>
+            </select>
+
+            <label for="branch">Branch <span class="required">*</span></label>
+            <select id="branch" name="branch" required>
+                <option value="">Select Branch</option>
+                <option value="cse">CSE</option>
+                <option value="cse_ai_ml">CSE (AI/ML)</option>
+                <option value="ise">ISE</option>
+                <option value="ece">ECE</option>
+                <option value="eee">EEE</option>
+                <option value="me">ME</option>
+                <option value="cve">CVE</option>
+                <option value="ipe">IPE</option>
+            </select>
+
+            <label for="year">Year <span class="required">*</span></label>
+            <select id="year" name="year" required>
+                <option value="">Select Year</option>
+                <option value="1">I</option>
+                <option value="2">II</option>
+                <option value="3">III</option>
+                <option value="4">IV</option>
+            </select>
+
+            <label>Are you an IEEE member? <span class="required">*</span></label>
+            <select id="ieee_member" name="ieee_member" onchange="toggleIEEEField()" required>
+                <option value="">Select</option>
+                <option value="yes">Yes</option>
+                <option value="no">No</option>
+            </select>
+            
+
+            <div id="ieeeNumberField" style="display: none;">
+                <label for="ieee_number">IEEE Number</label>
+                <input type="number" id="ieee_number" name="ieee_number" placeholder="Enter IEEE number">
+            </div>
+
+            <button type="submit" class="cta-button">Submit</button>
+        </form>
+    </main>
+
+    <script>
+        function toggleIEEEField() {
+            const ieeeField = document.getElementById("ieeeNumberField");
+            const ieeeSelect = document.getElementById("ieee_member");
+
+            // Show IEEE number field if "Yes" is selected, else hide it
+            if (ieeeSelect.value === "yes") {
+                ieeeField.style.display = "block";
+            } else {
+                ieeeField.style.display = "none";
+            }
+        }
+
+        function validateForm() {
+    const name = document.getElementById("name").value.trim();
+    const usn = document.getElementById("usn").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const ieeeMember = document.getElementById("ieee_member").value;
+    const ieeeNumber = document.getElementById("ieee_number").value.trim();
+
+    // Name validation (only alphabets)
+    if (!/^[a-zA-Z\s]+$/.test(name)) {
+        alert("Name must contain only alphabets.");
+        return false;
+    }
+
+    // USN validation (alphanumeric and exactly 10 characters)
+    if (!/^[a-zA-Z0-9]{10}$/.test(usn)) {
+        alert("USN must be alphanumeric and exactly 10 characters.");
+        return false;
+    }
+
+    // Phone number validation (10 digits, starts with 6, 7, 8, or 9)
+    if (!/^[6-9][0-9]{9}$/.test(phone)) {
+        alert("Phone number must be 10 digits and start with 6, 7, 8, or 9.");
+        return false;
+    }
+
+    // IEEE member validation (if yes, check IEEE number)
+    if (ieeeMember === "yes") {
+        if (ieeeNumber === "" || !/^[0-9]+$/.test(ieeeNumber)) {
+            alert("IEEE number must be a valid number.");
+            return false;
+        }
+        const ieeeNumberInt = parseInt(ieeeNumber);
+        if (ieeeNumberInt < 8000000 || ieeeNumberInt > 110000000) {
+            alert("Invalid IEEE number");
+            return false;
+        }
+    }
+
+    return true;
+}
+
+    </script>
+</body>
+</html>

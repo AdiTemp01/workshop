@@ -1,0 +1,188 @@
+/* General Body and Text Styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    background: linear-gradient(to right,#92a8d1, #fd918f); /* Original gradient colors restored */
+    color: white;
+    overflow-x: hidden;
+    text-align: center;
+}
+
+header {
+    background: linear-gradient(to right, #8e44ad, #3498db); /* Original header colors restored */
+    color: white;
+    padding: 2.5em;
+    text-align: center;
+    font-size: 2.5em;
+}
+
+header h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5em;
+    animation: fadeInDown 1.5s ease-in-out;
+}
+
+/* Section Styling */
+section {
+    margin: 3em auto; /* Uniform spacing between sections */
+    padding: 2em;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    max-width: 900px; /* Restrict width */
+    text-align: center;
+}
+
+/* Ensure consistent animation across all sections */
+section:hover {
+    transform: scale(1.02); /* Subtle zoom effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Heading Styling */
+h2 {
+    font-size: 2rem;
+    margin-bottom: 1em;
+    background: linear-gradient(90deg, #000000, #3478ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent; /* Gradient text effect */
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Enhance visibility */
+}
+
+/* Registration Process Steps */
+.roadmap {
+    display: flex;
+    justify-content: space-between;
+    max-width: 900px;
+    margin: 0 auto;
+    gap: 2em;
+}
+
+.step {
+    background: rgba(255, 255, 255, 0.15);
+    padding: 2em;
+    border-radius: 15px;
+    width: 45%; /* Adjust to create space between steps */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.step:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.step-number {
+    font-size: 2rem;
+    color: #ff2e63;
+    font-weight: bold;
+}
+
+.step-text {
+    font-size: 1.2rem;
+    margin-top: 1em;
+}
+
+/* List Styling for Agenda and Highlights */
+.agenda-list, .highlight-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0 auto; /* Center the list */
+    max-width: 800px; /* Restrict the width for readability */
+}
+
+.agenda-list li, .highlight-list li {
+    font-size: 1.2rem;
+    margin: 1em 0;
+    padding: 1em;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    justify-content: center; /* Center-align items */
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.agenda-list li:hover, .highlight-list li:hover {
+    transform: scale(1.05);
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* Flutter Showcase Section */
+#flutter-showcase {
+    color: #333;
+    padding: 2em;
+    margin-top: 3em;
+}
+
+.flutter-images {
+    display: flex;
+    justify-content: space-around;
+    gap: 1.5em;
+    flex-wrap: wrap; /* Allow images to wrap on smaller screens */
+}
+
+.flutter-image {
+    width: 20%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease;
+}
+
+.flutter-image:hover {
+    transform: scale(1.05);
+}
+
+/* Register Now Button */
+.cta-button {
+    background: linear-gradient(135deg, #ff7eb3, #ff758f, #ee4d4f); /* Original gradient button */
+    padding: 1.2em 2.5em;
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    border-radius: 25px;
+    display: inline-block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.cta-button:hover {
+    background: linear-gradient(135deg, #ff758f, #ff7eb3, #ff4081); /* Hover effect with brighter colors */
+    transform: scale(1.05);
+}
+
+/* Footer Styles */
+footer {
+    background: #252525;
+    color: white;
+    padding: 2em;
+    text-align: center;
+}
+
+footer .social-icons {
+    margin-top: 1em;
+}
+
+footer .social-icons a {
+    color: white;
+    margin: 0 10px;
+    font-size: 2rem;
+    transition: transform 0.2s;
+}
+
+footer .social-icons a:hover {
+    transform: scale(1.2);
+}
+a{
+    color:rgb(225, 84, 194);
+}

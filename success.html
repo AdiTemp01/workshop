@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Successful</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"> <!-- For social media icons -->
+    <style>
+        /* General Reset */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html, body {
+            height: 100%;
+            font-family: 'Arial', sans-serif;
+            background: linear-gradient(to right, #8e44ad, #3498db);
+            color: #fff;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: bold;
+            animation: slideInFromTop 1s ease-out;
+        }
+
+        main {
+            background: rgba(0, 0, 0, 0.6);
+            padding: 40px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        main p {
+            font-size: 1.2rem;
+            text-align: center;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        footer {
+            position: absolute;
+            bottom: 20px;
+            width: 100%;
+            text-align: center;
+            font-size: 1rem;
+            color: #fff;
+            animation: slideInFromBottom 1.5s ease-out;
+        }
+
+        footer h3 {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+            color: #f39c12;
+        }
+
+        footer p {
+            margin-bottom: 10px;
+        }
+
+        footer .social-icons a {
+            text-decoration: none;
+            font-size: 2rem;
+            margin: 0 10px;
+            color: #fff;
+            transition: color 0.3s ease, transform 0.3s ease;
+        }
+
+        footer .social-icons a:hover {
+            color: #f39c12;
+            transform: scale(1.2);
+        }
+
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromTop {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideInFromBottom {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Registration Successful!</h1>
+    </header>
+
+    <main>
+        <p>Thank you for registering. We look forward to seeing you at the workshop.</p>
+    </main>
+
+    <footer>
+        <h3>CONTACT US:</h3>
+        <p>E-mail: <a href="mailto:nisb@nie.ac.in">nisb@nie.ac.in</a></p>
+        <p>Phone no: +91 9632612659</p>
+        <div class="social-icons">
+            <a href="https://www.instagram.com/ieee_nie/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Add more social icons if needed -->
+        </div>
+    </footer>
+
+</body>
+</html>
